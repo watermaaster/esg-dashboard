@@ -55,7 +55,7 @@ def get_api_realtime_data():
 # 3. 과거 데이터 로드 함수 (메모리 최적화 유지)
 def load_excel_safe():
     files = os.listdir('.')
-    w_files = [f for f in files if '수질' in f and f.endswith('.xlsx')]
+    w_files = [f for f in files if f.endswith('.xlsx')]
     if not w_files: return None
     
     target_columns = ['일자', '총량지점명', 'BOD(㎎/L)', '유량(㎥/s)']
